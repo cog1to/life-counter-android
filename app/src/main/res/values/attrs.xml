@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="touchable">
+        <attr name="emitDelay" format="integer"/>
+        <attr name="emitInterval" format="integer" />
+        <attr name="emitFirst" format="boolean" />
+    </declare-styleable>
+</resources>

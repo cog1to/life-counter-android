@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MainText">
+        <item name="android:textSize">60sp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="MainButton" parent="@style/MainText">
+        <item name="emitFirst">true</item>
+        <item name="emitDelay">400</item>
+        <item name="emitInterval">100</item>
+    </style>
+    <style name="LeftButton" parent="@style/MainButton">
+        <item name="android:foreground">@drawable/left_ripple</item>
+    </style>
+    <style name="RightButton" parent="@style/MainButton">
+        <item name="android:foreground">@drawable/right_ripple</item>
+    </style>
+</resources>

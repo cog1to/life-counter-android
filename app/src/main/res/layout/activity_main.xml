@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:touchable="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_tile">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_base"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/control_background"
+            android:rotation="180"
+            app:layout_constraintBottom_toTopOf="@+id/button_reset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imageView1"
+                android:src="@drawable/metal_seamless_texture_800"
+                android:scaleType="center"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:riv_corner_radius="24dp"
+                app:riv_tile_mode="repeat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/text_opponentLifeTotal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                style="@style/MainText"
+                android:background="@drawable/display_background"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ru.aint.mtg.lifecounter.view.ContinuousTouchableTextView
+                android:id="@+id/button_opponentMinus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/minus"
+                style="@style/LeftButton"
+                android:background="@drawable/left_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+
+            <ru.aint.mtg.lifecounter.view.ContinuousTouchableTextView
+                android:id="@+id/button_opponentPlus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/plus"
+                style="@style/RightButton"
+                android:background="@drawable/right_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/control_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_reset">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imageView2"
+                android:src="@drawable/metal_seamless_texture_800"
+                android:scaleType="center"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:riv_corner_radius="24dp"
+                app:riv_tile_mode="repeat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/text_playerLifeTotal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                style="@style/MainText"
+                android:background="@drawable/display_background"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ru.aint.mtg.lifecounter.view.ContinuousTouchableTextView
+                android:id="@+id/button_playerMinus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/minus"
+                style="@style/LeftButton"
+                android:background="@drawable/left_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+
+            <ru.aint.mtg.lifecounter.view.ContinuousTouchableTextView
+                android:id="@+id/button_playerPlus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/plus"
+                style="@style/RightButton"
+                android:background="@drawable/right_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintWidth_percent="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:hapticFeedbackEnabled="true"
+            android:id="@+id/button_reset"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:scaleType="fitCenter"
+            android:src="@drawable/reset"
+            android:foreground="@drawable/center_ripple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
