@@ -9,4 +9,5 @@
     <color name="metal_gradient_mid">#88aeaeae</color>
     <color name="metal_gradient_button_start">#aadddddd</color>
     <color name="metal_gradient_end">#88666666</color>
+    <color name="button_tint">#803c3c3c</color>
 </resources>

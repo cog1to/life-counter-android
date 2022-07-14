@@ -37,10 +37,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpViewModel() {
         viewModel.onTotalsChanged = { playerTotal, opponentTotal ->
-            binding.textPlayerLifeTotal.text = "$playerTotal"
-            binding.textOpponentLifeTotal.text = "$opponentTotal"
+            binding.playerLifeTotalLayout.setText("$playerTotal")
+            binding.opponentLifeTotalLayout.setText("$opponentTotal")
         }
-
     }
 
     private fun setUpViews() {
@@ -59,8 +58,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         val (player, opponent) = viewModel.getTotals()
-        binding.textPlayerLifeTotal.text = "$player"
-        binding.textOpponentLifeTotal.text = "$opponent"
+        binding.playerLifeTotalLayout.setText("$player")
+        binding.opponentLifeTotalLayout.setText("$opponent")
 
         binding.buttonPlayerMinus.setOnClickListener { _ ->
             viewModel.changePlayerTotal(LifeCounterViewModel.Change.minusOne)

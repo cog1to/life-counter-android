@@ -6,10 +6,13 @@
         <item name="android:gravity">center</item>
         <item name="android:textAlignment">center</item>
     </style>
-    <style name="MainButton" parent="@style/MainText">
+    <style name="MainButton">
         <item name="emitFirst">true</item>
         <item name="emitDelay">400</item>
         <item name="emitInterval">100</item>
+        <item name="android:gravity">center</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:tint">@color/button_tint</item>
     </style>
     <style name="LeftButton" parent="@style/MainButton">
         <item name="android:foreground">@drawable/left_ripple</item>

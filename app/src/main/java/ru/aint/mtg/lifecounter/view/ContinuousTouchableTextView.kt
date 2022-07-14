@@ -8,7 +8,7 @@ import ru.aint.mtg.lifecounter.R
 import java.util.*
 import kotlin.concurrent.fixedRateTimer
 
-class ContinuousTouchableTextView(context: Context, attrs: AttributeSet): androidx.appcompat.widget.AppCompatTextView(context, attrs) {
+class ContinuousTouchableImageView(context: Context, attrs: AttributeSet): androidx.appcompat.widget.AppCompatImageView(context, attrs) {
     private var emitFirst: Boolean = false
     private var emitDelay: Long = 500
     private var emitInterval: Long = 100

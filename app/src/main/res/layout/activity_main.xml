@@ -2,8 +2,6 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:touchable="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_tile">
@@ -40,22 +38,25 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
-            <TextView
-                android:id="@+id/text_opponentLifeTotal"
+            <ru.aint.mtg.lifecounter.view.RasterizedDigitalView
+                android:id="@+id/opponentLifeTotalLayout"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                style="@style/MainText"
+                android:orientation="horizontal"
                 android:background="@drawable/display_background"
+                android:gravity="center"
+                android:textAlignment="center"
                 app:layout_constraintHeight_percent="0.5"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+            </ru.aint.mtg.lifecounter.view.RasterizedDigitalView>
 
-            <ru.aint.mtg.lifecounter.view.ContinuousTouchableTextView
+            <ru.aint.mtg.lifecounter.view.ContinuousTouchableImageView
                 android:id="@+id/button_opponentMinus"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:text="@string/minus"
+                android:src="@drawable/minus"
                 style="@style/LeftButton"
                 android:background="@drawable/left_background"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -63,11 +64,11 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintWidth_percent="0.5" />
 
-            <ru.aint.mtg.lifecounter.view.ContinuousTouchableTextView
+            <ru.aint.mtg.lifecounter.view.ContinuousTouchableImageView
                 android:id="@+id/button_opponentPlus"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:text="@string/plus"
+                android:src="@drawable/plus"
                 style="@style/RightButton"
                 android:background="@drawable/right_background"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -103,10 +104,25 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
-            <TextView
-                android:id="@+id/text_playerLifeTotal"
+            <ru.aint.mtg.lifecounter.view.RasterizedDigitalView
+                android:id="@+id/player_lifeTotalLayout"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:background="@drawable/display_background"
+                android:gravity="center"
+                android:textAlignment="center"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </ru.aint.mtg.lifecounter.view.RasterizedDigitalView>
+
+            <TextView
+                android:id="@+id/playerLifeTotalLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="invisible"
                 style="@style/MainText"
                 android:background="@drawable/display_background"
                 app:layout_constraintHeight_percent="0.5"
@@ -114,11 +130,11 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ru.aint.mtg.lifecounter.view.ContinuousTouchableTextView
+            <ru.aint.mtg.lifecounter.view.ContinuousTouchableImageView
                 android:id="@+id/button_playerMinus"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:text="@string/minus"
+                android:src="@drawable/minus"
                 style="@style/LeftButton"
                 android:background="@drawable/left_background"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -126,11 +142,11 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintWidth_percent="0.5" />
 
-            <ru.aint.mtg.lifecounter.view.ContinuousTouchableTextView
+            <ru.aint.mtg.lifecounter.view.ContinuousTouchableImageView
                 android:id="@+id/button_playerPlus"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:text="@string/plus"
+                android:src="@drawable/plus"
                 style="@style/RightButton"
                 android:background="@drawable/right_background"
                 app:layout_constraintBottom_toBottomOf="parent"
