@@ -12,6 +12,8 @@
         <entry key="app/src/main/res/drawable/ic_reset_inside.xml" value="0.415" />
         <entry key="app/src/main/res/drawable/left_background.xml" value="0.415" />
         <entry key="app/src/main/res/drawable/left_ripple.xml" value="0.415" />
+        <entry key="app/src/main/res/drawable/main_tile.xml" value="0.1245" />
+        <entry key="app/src/main/res/drawable/reset_background.xml" value="0.3955" />
         <entry key="app/src/main/res/drawable/right_background.xml" value="0.415" />
         <entry key="app/src/main/res/drawable/right_ripple.xml" value="0.415" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16058394160583941" />

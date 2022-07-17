@@ -27,7 +27,7 @@
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/imageView1"
-                android:src="@drawable/metal_seamless_texture_800"
+                android:src="@drawable/button_texture"
                 android:scaleType="center"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -93,7 +93,7 @@
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/imageView2"
-                android:src="@drawable/metal_seamless_texture_800"
+                android:src="@drawable/button_texture"
                 android:scaleType="center"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
